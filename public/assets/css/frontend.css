@@ -1,0 +1,294 @@
+:root {
+    --lukbek-dark: #111827;
+    --lukbek-gold: #d4a017;
+    --lukbek-light: #f8f8f6;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--lukbek-dark);
+}
+
+
+.brand-main {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+
+.brand-sub {
+    font-size: 8px;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+
+.navbar .nav-link {
+    color: #333;
+    margin: 0 8px;
+}
+
+
+.navbar .nav-link:hover {
+    color: var(--lukbek-gold);
+}
+
+
+.btn-warning {
+    background: var(--lukbek-gold);
+    border-color: var(--lukbek-gold);
+}
+
+
+.hero-section {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.55)
+        ),
+        url('/assets/images/hero.jpg')
+        center/cover no-repeat;
+
+    color: white;
+}
+
+
+.min-vh-75 {
+    min-height: 650px;
+}
+
+
+.hero-badge {
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+
+.hero-title {
+    font-size: clamp(45px, 6vw, 75px);
+    font-weight: 700;
+    line-height: 1.05;
+    margin: 20px 0;
+}
+
+
+.hero-title span {
+    color: var(--lukbek-gold);
+}
+
+
+.hero-text {
+    max-width: 600px;
+    font-size: 18px;
+    color: #eee;
+    margin-bottom: 30px;
+}
+
+
+.search-section {
+    margin-top: -60px;
+    position: relative;
+}
+
+
+.search-box {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.12);
+}
+
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+
+.section-heading span,
+.section-label {
+    color: var(--lukbek-gold);
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.section-heading h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+
+.property-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+
+.property-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.property-image {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.property-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--lukbek-gold);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+.verified-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+
+.property-body {
+    padding: 22px;
+}
+
+
+.property-price {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+
+.property-meta {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+
+.services-section {
+    background: var(--lukbek-light);
+}
+
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    height: 100%;
+    transition: .3s;
+}
+
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background: #fff4d6;
+    color: var(--lukbek-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+
+.about-image {
+    min-height: 450px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.2),
+            rgba(0,0,0,.2)
+        ),
+        url('/assets/images/about.jpg')
+        center/cover;
+
+    border-radius: 20px;
+    position: relative;
+}
+
+
+.experience-box {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+
+.experience-box strong {
+    font-size: 40px;
+    display: block;
+}
+
+
+.cta-section {
+    background: var(--lukbek-dark);
+    color: white;
+    padding: 80px 0;
+}
+
+
+@media(max-width: 768px) {
+
+    .hero-section {
+        min-height: 600px;
+    }
+
+    .min-vh-75 {
+        min-height: 600px;
+    }
+
+    .hero-title {
+        font-size: 45px;
+    }
+
+    .search-section {
+        margin-top: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+}
