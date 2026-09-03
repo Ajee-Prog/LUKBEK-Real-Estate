@@ -14,12 +14,54 @@ return new class extends Migration
     public function up()
     {
         Schema::create('leads', function (Blueprint $table) {
+            // $table->id();
+            // $table->string('name');
+            // $table->string('email');
+            // $table->string('phone');
+            // $table->text('message');
+            // $table->timestamps();
             $table->id();
-            $table->string('name');
-            $table->string('email');
-            $table->string('phone');
-            $table->text('message');
-            $table->timestamps();
+
+    $table->foreignId('property_id')
+        ->nullable()
+        ->constrained()
+        ->nullOnDelete();
+
+    $table->foreignId('agent_id')
+        ->nullable()
+        ->constrained('users')
+        ->nullOnDelete();
+
+    $table->string('name');
+
+    $table->string('email')
+        ->nullable();
+
+    $table->string('phone');
+
+    $table->enum('source', [
+        'website',
+        'whatsapp',
+        'phone',
+        'referral',
+        'social_media',
+        'other'
+    ])->default('website');
+
+    $table->enum('status', [
+        'new',
+        'contacted',
+        'qualified',
+        'inspection',
+        'negotiation',
+        'closed',
+        'lost'
+    ])->default('new');
+
+    $table->text('notes')
+        ->nullable();
+
+    $table->timestamps();
         });
     }
 

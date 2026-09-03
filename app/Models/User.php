@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -41,4 +42,30 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    // Helper for Role
+    public function isSuperAdmin()
+    {
+        return $this->role === 'super_admin';
+    }
+
+
+    public function isAdmin()
+    {
+        return in_array($this->role, [
+            'super_admin',
+            'admin'
+        ]);
+    }
+
+
+    public function isAgent()
+    {
+        return $this->role === 'agent';
+    }
+
+
+    public function isCustomer()
+    {
+        return $this->role === 'customer';
+    }
 }
