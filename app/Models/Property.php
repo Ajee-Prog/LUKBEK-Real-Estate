@@ -13,6 +13,7 @@ class Property extends Model
         'reference_no',
         'title',
         'slug',
+
         'description',
         'category_id',
         'listing_type',

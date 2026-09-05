@@ -27,4 +27,5 @@ class PropertyImage extends Model
             Property::class
         );
     }
+
 }

@@ -13,8 +13,8 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if (
-            !auth()->check() ||
-             !auth()->user()->isAdmin()
+            !auth()->check() //||
+            //  !auth()->user()->isAdmin()
 
         ) {
 

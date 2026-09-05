@@ -68,4 +68,31 @@ class User extends Authenticatable
     {
         return $this->role === 'customer';
     }
+
+
+
+    public function properties()
+{
+    return $this->hasMany(
+        Property::class,
+        'agent_id'
+    );
+}
+
+
+public function bookings()
+{
+    return $this->hasMany(
+        Booking::class
+    );
+}
+
+
+public function leads()
+{
+    return $this->hasMany(
+        Lead::class,
+        'agent_id'
+    );
+}
 }
