@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Property;
 use App\Models\Service;
 use App\Models\PropertyCategory;
+use App\Models\Testimonial;
 
 class HomeController extends Controller
 {
@@ -72,12 +73,25 @@ class HomeController extends Controller
         ->orderBy('name')
         ->get();
 
+        // Services managed from admin
+        $services = Service::where('status', true)
+            ->latest()
+            ->take(4)
+            ->get();
+
+            $testimonials = Testimonial::where('status', true)
+            ->latest()
+            ->take(6)
+            ->get();
+
         return view(
             'frontend.home',
             compact(
                 'featuredProperties',
                 'latestProperties',
-                'categories'
+                'categories',
+                'services',
+                'testimonials'
             )
         );
     }

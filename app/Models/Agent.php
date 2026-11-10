@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Agent extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'photo',
+        'bio',
+        'status',
+    ];
+
+    public function properties()
+    {
+        return $this->hasMany(Property::class);
+    }
 }

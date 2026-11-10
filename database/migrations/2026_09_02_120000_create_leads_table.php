@@ -22,14 +22,10 @@ return new class extends Migration
             // $table->timestamps();
             $table->id();
 
-    $table->foreignId('property_id')
-        ->nullable()
-        ->constrained()
-        ->nullOnDelete();
+    $table->foreignId('property_id')->nullable()->constrained('properties')
+        ->OnDelete('set null');
 
-    $table->foreignId('agent_id')
-        ->nullable()
-        ->constrained('users')
+    $table->foreignId('agent_id')->nullable()->constrained('users')
         ->nullOnDelete();
 
     $table->string('name');

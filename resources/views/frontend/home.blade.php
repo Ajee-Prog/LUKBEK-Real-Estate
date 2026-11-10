@@ -120,9 +120,7 @@
 
                     <div class="col-lg-3">
 
-                        <select
-                            name="listing_type"
-                            class="form-select">
+                        <select name="listing_type" class="form-select">
 
                             <option value="">
                                 Buy or Rent
@@ -428,29 +426,10 @@
     </div>
 
 </section>
-<h1> To CHOOSE EITHER OF THE TWO HOMES BUT DOWN ONE PREFERABE</h1>
-{{--  --}}
-
-
-@endsection
-
-{{--  --}}
-@extends('layouts.public')
-
-@section('title', 'LUKBEK Real Estate | Homes & Property')
-
-@section(
-    'meta_description',
-    'LUKBEK Real Estate - buying, selling,
-    property management, real estate advisory,
-    interior and exterior decoration.'
-)
-
-
-@section('content')
-
+{{-- <h1> To CHOOSE EITHER OF THE TWO HOMES BUT DOWN ONE PREFERABE</h1> --}}
 
 {{-- HERO --}}
+<h1> To CHOOSE EITHER OF THE TWO HOMES BUT DOWN ONE PREFERABE</h1>
 
 <section class="hero-section">
 
@@ -775,7 +754,7 @@
                         property buyers and sellers.
                     </p>
 
-                    <a href="{{ route('services') }}">
+                    <a href="{{ route('services.index') }}">
                         Learn More
                     </a>
 
@@ -801,7 +780,7 @@
                         residential and commercial assets.
                     </p>
 
-                    <a href="{{ route('services') }}">
+                    <a href="{{ route('services.index') }}">
                         Learn More
                     </a>
 
@@ -827,9 +806,9 @@
                         investment decisions.
                     </p>
 
-                    <a href="{{ route('services') }}">
+                    {{-- <a href="{{ route('services.index ' ) }}">
                         Learn More
-                    </a>
+                    </a> --}}
 
                 </div>
 
@@ -853,7 +832,7 @@
                         professional decoration services.
                     </p>
 
-                    <a href="{{ route('services') }}">
+                    <a href="{{ route('services.index') }}">
                         Learn More
                     </a>
 
@@ -958,5 +937,28 @@
 
 </section>
 
+{{--  --}}
+
 
 @endsection
+
+{{--  --}}
+{{-- @extends('layouts.public')  {{
+
+@section('title', 'LUKBEK Real Estate | Homes & Property')
+
+@section(
+    'meta_description',
+    'LUKBEK Real Estate - buying, selling,
+    property management, real estate advisory,
+    interior and exterior decoration.'
+)
+
+
+@section('content')
+
+
+
+
+
+@endsection --}}

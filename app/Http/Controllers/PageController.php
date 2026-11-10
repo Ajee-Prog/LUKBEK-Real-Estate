@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function services()
-{
-    return view('pages.services');
-}
+    // public function services()
+    // {
+    //     return view('pages.services');
+    // }
+    public function about()
+    {
+        return view('frontend.about');
+    }
 }

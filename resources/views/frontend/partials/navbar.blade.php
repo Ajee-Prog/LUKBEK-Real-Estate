@@ -7,7 +7,7 @@
            href="{{ route('home') }}">
 
             <span class="brand-main">
-                LUKBEK
+                <img src="{{ asset('images/lukbek-logo1.png') }}" alt="LukBek Logo" class="-100 rounded" style=" width: 60px; height: 40px; margin-left:65px;">
             </span>
 
             <small class="d-block brand-sub">

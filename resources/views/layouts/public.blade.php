@@ -53,6 +53,7 @@
 
             <span class="brand-mark">
                 L
+                <img src="{{ asset('images/lukbek-logo1.png') }}" alt="LukBek Logo" class="w-100 rounded">
             </span>
 
             LUKBEK
@@ -109,7 +110,7 @@
 
                     <a
                         class="nav-link"
-                        href="{{ route('services') }}">
+                        href="{{ route('services.index') }}">
 
                         Services
 
@@ -211,7 +212,7 @@
                         <i class="bi bi-linkedin"></i>
                     </a>
 
-                    <a href="#">
+                    <a href="https://wa.me/2347039564104" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-whatsapp"></i>
                     </a>
 
@@ -235,7 +236,7 @@
                     </li>
 
                     <li>
-                        <a href="{{ route('services') }}">
+                        <a href="{{ route('services.index') }}">
                             Services
                         </a>
                     </li>
@@ -303,7 +304,7 @@
 
                 <p>
                     <i class="bi bi-telephone"></i>
-                    +234 800 000 0000
+                    +234 703 956 4104
                 </p>
 
                 <p>
@@ -328,7 +329,8 @@
                         gap-2">
 
                 <span>
-                    © {{ date('Y') }}
+                    <a href="" style="border-right: 2px solid white; padding-right:10px; margin-right: 13px;"> Powered by YusTech</a>
+                     &copy; 2015 - {{ date('Y') }}
                     LUKBEK Real Estate.
                     All rights reserved.
                 </span>

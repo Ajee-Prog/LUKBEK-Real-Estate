@@ -27,6 +27,59 @@
 
     </div>
 
+    {{-- THis is to replaced the contact Buttons  --}}
+<a
+    href="{{ route(
+        'properties.interest',
+        $property->slug
+    ) }}"
+    class="btn btn-warning w-100 mb-3">
+
+    <i class="bi bi-chat-dots"></i>
+
+    I'm Interested
+
+</a>
+
+
+<a
+    href="{{ route(
+        'inspections.create',
+        $property->slug
+    ) }}"
+    class="btn btn-dark w-100 mb-3">
+
+    <i class="bi bi-calendar-check"></i>
+
+    Schedule Inspection
+
+</a>
+
+
+<a
+    href="https://wa.me/2348000000000"
+    class="btn btn-success w-100 mb-3">
+
+    <i class="bi bi-whatsapp"></i>
+
+    WhatsApp Agent
+
+</a>
+
+
+<a
+    href="tel:+2348000000000"
+    class="btn btn-outline-dark w-100">
+
+    <i class="bi bi-telephone"></i>
+
+    Call Agent
+
+</a>
+{{-- THese above are to replaced the contact Buttons ends here  --}}
+
+<h1> -------The Above Buttons are to replaced Cantact Buttons-----</h1>
+
 </section>
 
 
